@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AstroCode — Destroy asteroids by typing code</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="game-container">
+
+    <!-- Main canvas where the whole game is drawn -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- HUD: score, level, lives and pause button -->
+    <div id="hud">
+      <div class="hud-left">
+        <div class="hud-item">SCORE: <span id="score">0</span></div>
+        <div class="hud-item">LEVEL: <span id="level">1</span></div>
+        <div class="hud-item">LIVES: <span id="lives">❤❤❤</span></div>
+      </div>
+      <button id="pauseBtn" class="icon-btn hidden" title="Pause">⏸</button>
+    </div>
+
+    <!-- Start screen -->
+    <div id="start-screen" class="overlay">
+      <h1>ASTRO<span class="accent">CODE</span></h1>
+      <p>Type the words before the asteroids reach your ship.</p>
+      <button id="startBtn">PLAY</button>
+      <p class="hint">Start typing any letter to target an asteroid.<br>Press ESC anytime to pause.</p>
+    </div>
+
+    <!-- Pause screen -->
+    <div id="pause-screen" class="overlay hidden">
+      <h1>PAUSED</h1>
+      <button id="resumeBtn">RESUME</button>
+      <button id="restartFromPauseBtn" class="secondary">RESTART</button>
+      <button id="menuBtn" class="secondary">MAIN MENU</button>
+    </div>
+
+    <!-- Game Over screen -->
+    <div id="gameover-screen" class="overlay hidden">
+      <h1>GAME OVER</h1>
+      <p id="finalScore">Final score: 0</p>
+      <button id="restartBtn">RETRY</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
